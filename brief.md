@@ -21,7 +21,9 @@ DNS over HTTPS (DoH) sends DNS queries and responses through HTTPS, helping prot
 
 Resource: RFC 8484: DNS Queries over HTTPS (DoH) - https://www.rfc-editor.org/rfc/rfc8484.html
 ## Cybersecurity
-Phishing-resistant authentication prevents authentication secrets or valid outputs from being disclosed to an impostor verifier, without relying on the user's ability to recognise a fake website. FIDO2/WebAuthn security keys and passkeys using public-key cryptography can provide phishing-resistant authentication when correctly implemented. By contrast, manually entered passwords and one-time codes, including SMS OTPs, are not considered phishing-resistant by NIST because attackers may relay them to a legitimate service.
+Phishing-resistant MFA is MFA that a fake login page cannot capture and reuse, unlike a typed one-time code. CISA names FIDO/WebAuthn and PKI-based MFA, such as smart cards, as phishing-resistant. Authenticator-app one-time passwords and number-matching push are still phishable, push without number matching is open to push bombing, and SMS or voice codes are vulnerable to phishing, SS7 and SIM-swap attacks. These methods do not qualify.
+
+Resource: Implementing Phishing-Resistant MFA (CISA fact sheet) - https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf
 
 Resource: NIST SP 800-63B, Authentication and Authenticator Management - https://pages.nist.gov/800-63-4/sp800-63b/authenticators/ 
 ## Data
