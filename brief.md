@@ -17,11 +17,17 @@ Android runtime permissions allow users to decide whether an app can access cert
 
 Resource: Permissions on Android - https://developer.android.com/guide/topics/permissions/overview
 ## Networking
+DNS over HTTPS (DoH) sends DNS queries and responses through HTTPS, helping protect them from being read or modified by parties monitoring the network path. For users accessing a national login service, this can make DNS activity harder for local network observers to inspect. However, DoH does not hide all browsing activity, prevent phishing by itself, or replace HTTPS protection for the login website.
 
+Resource: RFC 8484: DNS Queries over HTTPS (DoH) - https://www.rfc-editor.org/rfc/rfc8484.html
 ## Cybersecurity
+Phishing-resistant authentication prevents authentication secrets or valid outputs from being disclosed to an impostor verifier, without relying on the user's ability to recognise a fake website. FIDO2/WebAuthn security keys and passkeys using public-key cryptography can provide phishing-resistant authentication when correctly implemented. By contrast, manually entered passwords and one-time codes, including SMS OTPs, are not considered phishing-resistant by NIST because attackers may relay them to a legitimate service.
 
+Resource: NIST SP 800-63B, Authentication and Authenticator Management - https://pages.nist.gov/800-63-4/sp800-63b/authenticators/ 
 ## Data
+Oman's Personal Data Protection Law establishes requirements for handling personal data. For a national login service, the authority should identify a lawful basis for processing, explain how data will be used, obtain consent where required, and protect stored information against unauthorised access. It should also follow applicable rules on individuals' rights, data retention, and disclosures. The authority must verify the law and its executive regulations before defining its procedures.
 
+Resource: Oman Personal Data Protection Law, Royal Decree 6/2022 - https://qanoon.om/p/2022/rd20220006/
 ## Misconception in My Track
 
 ## Open Question
