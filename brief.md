@@ -17,19 +17,17 @@ Android apps run in sandboxes that limit access to other apps' data and protecte
 
 Resource: Request runtime permissions | Android Developers - https://developer.android.com/training/permissions/requesting
 ## Networking
-DNS over HTTPS (DoH) sends DNS queries and responses through HTTPS, helping protect them from being read or modified by parties monitoring the network path. For users accessing a national login service, this can make DNS activity harder for local network observers to inspect. However, DoH does not hide all browsing activity, prevent phishing by itself, or replace HTTPS protection for the login website.
+DNS over HTTPS (DoH), specified in RFC 8484, sends DNS queries and responses over an HTTPS connection. This helps protect DNS lookups from passive observation and tampering along the path to the resolver, while TLS authenticates the DoH server. However, the resolver can still see the queries, and DoH does not hide the user's IP address from the resolver or guarantee that DNS answers are correct. It also does not replace DNSSEC.
 
 Resource: RFC 8484: DNS Queries over HTTPS (DoH) - https://www.rfc-editor.org/rfc/rfc8484.html
 ## Cybersecurity
-Phishing-resistant MFA is MFA that a fake login page cannot capture and reuse, unlike a typed one-time code. CISA names FIDO/WebAuthn and PKI-based MFA, such as smart cards, as phishing-resistant. Authenticator-app one-time passwords and number-matching push are still phishable, push without number matching is open to push bombing, and SMS or voice codes are vulnerable to phishing, SS7 and SIM-swap attacks. These methods do not qualify.
+A common misconception is that all multi-factor authentication (MFA) methods are phishing-resistant. CISA identifies FIDO/WebAuthn and public key infrastructure (PKI)-based MFA, such as smart cards, as phishing-resistant options. In contrast, authenticator-app one-time passwords and number-matching push remain vulnerable to phishing, while push approvals without number matching are vulnerable to push bombing. SMS and voice codes are vulnerable to phishing, SS7, and SIM-swap attacks. Therefore, adding a second factor does not automatically make authentication phishing-resistant.
 
-Resource: Implementing Phishing-Resistant MFA (CISA fact sheet) - https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf
-
-Resource: NIST SP 800-63B, Authentication and Authenticator Management - https://pages.nist.gov/800-63-4/sp800-63b/authenticators/ 
+Resource: Implementing Phishing-Resistant MFA - https://www.cisa.gov/sites/default/files/2023-01/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf 
 ## Data
-Oman's Personal Data Protection Law establishes requirements for handling personal data. For a national login service, the authority should identify a lawful basis for processing, explain how data will be used, obtain consent where required, and protect stored information against unauthorised access. It should also follow applicable rules on individuals' rights, data retention, and disclosures. The authority must verify the law and its executive regulations before defining its procedures.
+Oman's Personal Data Protection Law sets obligations for controllers handling personal data, including obtaining explicit consent where required, notifying individuals in writing before processing, protecting confidentiality, appointing a personal data protection officer, and maintaining processing records. Controllers must also notify the Ministry and affected individuals of qualifying data breaches. Processing specified sensitive data, including biometric data, generally requires a Ministry permit. However, Article 3(b) excludes certain processing by state bodies exercising legally prescribed competences, so its applicability to a national login service requires verification.
 
-Resource: Oman Personal Data Protection Law, Royal Decree 6/2022 - https://qanoon.om/p/2022/rd20220006/
+Resource: Royal Decree 6/2022 Issuing the Personal Data Protection Law (Consolidated) - https://decree.om/2022/l20220006/
 ## Misconception in My Track
 A common misconception is that all multi-factor authentication (MFA) methods are equally resistant to phishing. However, SMS codes and app-generated one-time passwords can be intercepted through phishing when users enter them on fake login pages. CISA identifies FIDO/WebAuthn as the only widely available phishing-resistant authentication method and also describes PKI-based MFA for suitable environments. This shows that adding a second factor does not automatically prevent phishing; the authentication method itself matters.
 
