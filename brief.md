@@ -29,5 +29,8 @@ Oman's Personal Data Protection Law establishes requirements for handling person
 
 Resource: Oman Personal Data Protection Law, Royal Decree 6/2022 - https://qanoon.om/p/2022/rd20220006/
 ## Misconception in My Track
+A common misconception is that all multi-factor authentication (MFA) methods are equally resistant to phishing. However, SMS codes and app-generated one-time passwords can be intercepted through phishing when users enter them on fake login pages. CISA identifies FIDO/WebAuthn as the only widely available phishing-resistant authentication method and also describes PKI-based MFA for suitable environments. This shows that adding a second factor does not automatically prevent phishing; the authentication method itself matters.
 
+Resource: Implementing Phishing-Resistant MFA - https://www.cisa.gov/sites/default/files/2023-01/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf
 ## Open Question
+“How does Article 3(b) of Oman's Personal Data Protection Law apply to a national digital identity service operated by a government authority, and what safeguards govern citizens’ personal data if the processing falls outside the Law’s direct scope?”
